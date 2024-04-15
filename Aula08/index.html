@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Estação</title>
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Cursos</a></li>
+                <li><a onclick="openDialog('contact')">Peça Sua Musica</a></li>
+                <li><a onclick="openDialog('matricula')">Sobre Nós</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <div class="dialog contactDialog hidden">
+        <div class="dialog-content">
+            <i class="bi bi-x-lg exit-dialog" onclick="closeDialog('contact')"></i>
+            <h1>Contato</h1>
+            <form>
+                <div>
+                    <label>Nome</label>
+                    <input type="text" placeholder="Nome" required>
+                </div>
+
+                <div>
+                    <label>Email</label>
+                    <input type="email" placeholder="Email" required>
+                </div>
+
+                <div>
+                    <label>Assunto</label>
+                    <input type="text" placeholder="Assunto" required>
+                </div>
+                <button class="sharp-button">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="dialog matriculaDialog hidden">
+        <div class="dialog-content">
+            <i class="bi bi-x-lg exit-dialog" onclick="closeDialog('matricula')"></i>
+
+            <h1>Sobre Nós</h1>
+
+            <p>Bem-vindo à Escuta Aí Ltda, onde a música é mais do que apenas uma paixão - é a nossa vida. Desde a nossa fundação, nos dedicamos a oferecer experiências musicais excepcionais para todos os amantes da música.</p>
+
+            <h1>Nossa Missão</h1>
+
+            <p>Na Escuta Aí, acreditamos que a música tem o poder de transformar vidas. Nossa missão é proporcionar acesso fácil e conveniente à melhor seleção de músicas, instrumentos musicais e equipamentos de áudio para inspirar e capacitar músicos de todos os níveis.</p>
+            
+            <h1>O Que Fazemos</h1>
+
+            <p>Somos uma empresa comprometida em oferecer produtos e serviços de alta qualidade no mundo da música. Nossa ampla gama de produtos inclui instrumentos musicais, equipamentos de áudio profissional, acessórios musicais e muito mais. Além disso, oferecemos aulas de música, workshops e eventos para promover o aprendizado e a comunidade musical.</p>
+        </div>
+    </div>
+
+
+  
+    
+
+    <div class="container">
+        <h1>Minha Estação</h1>
+        <div class="player">
+            <div class="cover-container">
+            </div>
+            <audio id="audioPlayer" controls>
+            <source src="assets/sounds/Brucky 2.0.m4a" type="audio/mpeg">
+            </audio>
+            <div class="controls">
+            <button id="prevButton"><ion-icon class="icon" name="play-skip-back-circle-outline"></ion-icon></button>
+            <button id="playPauseBtn"><ion-icon class="icon" name="play-circle-outline"></ion-icon></button>
+            <button id="nextButton"><ion-icon class="icon" name="play-skip-forward-circle-outline"></ion-icon></ion-icon></button>
+            </div>
+        </div>
+        
+        <div class="playlist">
+            <h2>DRILL</h2>
+            <ul id="playlist">
+                <li data-src="song1.mp3" class="song-item">
+                    SR - Bucky 2.0
+                </li>
+                <li data-src="song2.mp3" class="song-item">
+                    Central Cee - 6 For 6
+                </li>
+                <li data-src="song3.mp3" class="song-item">
+                    SR - Welcome To Brixton
+                </li>
+                </ul>
+        </div>
+
+        <div class="playlist">
+            <h2>MPB</h2>
+            <ul id="playlist">
+                <li data-src="song1.mp3" class="song-item">
+                    Miúcha, Antonio Carlos Jobim - Pela Luz Dos Olhos Teus
+                </li>
+                <li data-src="song2.mp3" class="song-item">
+                    Djavan - Um Amor Puro
+                </li>
+                <li data-src="song3.mp3" class="song-item">
+                    Toquinho - Onde Anda Você 
+                </li>
+                </ul>
+        </div>
+
+        <div class="playlist">
+            <h2>TRAP</h2>
+            <ul id="playlist">
+                <li data-src="song1.mp3" class="song-item">
+                    Kyan - Meninos Do Hexa
+                </li>
+                <li data-src="song2.mp3" class="song-item">
+                    Kayblack - Vivencias 
+                </li>
+                <li data-src="song3.mp3" class="song-item">
+                    ALEE - Glock De Cor
+                </li>
+                </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="logo">
+                <h1>&copy;2024 Escuta ai</h1>
+            </div>
+
+            <div class="copyright">
+                <p>Copyright © 2022-2024 Language Hub. Todos os direitos reservados.</p>
+            </div>
+
+            <div class="social">
+                <p>Siga-nos em nossas redes</p>
+
+                <div class="social-icons">
+                    <div class="instagram">
+                        <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
+                    </div>
+    
+                    <div class="github">
+                        <a href="#" target="_blank"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+        </div>
+    </footer>
+    <script src="assets/script/main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
